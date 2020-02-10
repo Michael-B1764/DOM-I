@@ -121,4 +121,21 @@ contactSection.setAttribute("style", "width:20%;");
 let copyright = document.querySelector("footer > p");
 copyright.innerHTML = siteContent.footer.copyright;
 
+// GET STARTED BUTTON //
 
+
+let toggle = (button) => {
+  if (pushButton.value=="off"){
+    pushButton.value="on";
+    ctaText.innerHTML="Well<br> this is<br> cool";
+  } else if (pushButton.value=="on"){
+    pushButton.value="off";
+    ctaText.innerHTML=siteContent.cta.h1;
+  }
+} 
+
+let pushButton = document.querySelector("button");
+pushButton.setAttribute("type", "button");
+pushButton.setAttribute("value", "on");
+pushButton.setAttribute("onclick", "toggle(this);");
+console.log(pushButton);
