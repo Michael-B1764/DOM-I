@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Explore",
+    "nav-item-8": "Blog",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -42,10 +44,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // NAV LINKS //
+let navigationLinks = document.querySelector("nav");
+var navigationAdd1 = document.createElement("a")
+navigationLinks.appendChild(navigationAdd1);
+navigationAdd1.setAttribute("href", "#;");
+var navigationAdd2 = document.createElement("a")
+navigationLinks.appendChild(navigationAdd2);
+navigationAdd2.setAttribute("href", "#;");
+
 let navItems = Array.from(document.querySelectorAll("nav > a"));
 for (let i = 0; i< navItems.length; i++){
   navItems[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`];
 }
+navItems.forEach(item => item.setAttribute("style", "color:green;"));
 
 
 // CTA //
